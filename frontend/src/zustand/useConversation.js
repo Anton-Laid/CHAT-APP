@@ -6,6 +6,8 @@ const useConversation = create((set) => ({
     set({ selectedConversation }),
   messages: [],
   setMessages: (messages) => set({ messages }),
+  isAction: false,
+  setIsAction: (bool) => set({ isAction: bool }),
 }));
 
 export default useConversation;

@@ -1,5 +1,4 @@
 import { Navigate, Route, Routes } from "react-router";
-import "./App.css";
 import Home from "./pages/home/Home.jsx";
 import Login from "./pages/login/index.jsx";
 import SignUp from "./pages/signup/SignUp.jsx";
@@ -10,7 +9,7 @@ function App() {
   const { authUser } = useAuthContext();
 
   return (
-    <div className=" h-screen flex items-center justify-center p-0">
+    <div className="h-screen flex items-center justify-center">
       <Routes>
         <Route
           path="/"

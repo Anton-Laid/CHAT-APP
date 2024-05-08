@@ -22,7 +22,7 @@ export default function SignUp() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
+    <div className="flex flex-col items-center justify-center w-min sm:w-96 md:w-96 lg:w-96 xl:w-96 mm:w-4/5">
       <div className="w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
         <h1 className="text-3xl font-semilbold text-center text-gray-300">
           Sign Up

@@ -13,54 +13,58 @@ export default function Login() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
+    <div className="flex flex-col items-center justify-center w-min sm:w-96 md:w-96 lg:w-96 xl:w-96 mm:w-4/5">
       <div className="w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
-        <h1 className="text-3xl font-semilbold text-center text-gray-300">
+        <h1 className="text-3xl font-semibold text-center text-gray-300">
           Login
-          <span className="text-blue-500 "> ChatApp</span>
+          <span className="text-blue-500"> ChatApp</span>
         </h1>
 
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label className="label p-2">
-              <span className="text-base lable-text">Username</span>
+        <form onSubmit={handleSubmit} className="mt-4">
+          <div className="mt-4">
+            <label className="label">
+              <span className="text-base label-text">Username</span>
             </label>
             <input
               type="text"
               placeholder="Enter username"
-              className="w-full input input-bordered h-10"
+              className="w-full input input-bordered h-10 mt-1"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
+          </div>
+
+          <div className="mt-4">
             <label className="label">
               <span className="text-base label-text">Password</span>
             </label>
             <input
-              type="text"
+              type="password"
               placeholder="Enter password"
-              className="w-full input input-bordered h-10"
+              className="w-full input input-bordered h-10 mt-1"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <Link
-              to="/signup"
-              className="text-sm  hover:underline hover:text-blue-600 mt-2 inline-block"
-            >
-              {"Don't"} have an account?
-            </Link>
+          </div>
 
-            <div>
-              <button
-                disabled={loading}
-                className="btn btn-block btn-sm mt-2 border border-slate-700"
-              >
-                {loading ? (
-                  <span className="loading loading-spinner"></span>
-                ) : (
-                  "Login"
-                )}
-              </button>
-            </div>
+          <Link
+            to="/signup"
+            className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block"
+          >
+            {`Don't have an account?`}
+          </Link>
+
+          <div className="mt-4">
+            <button
+              disabled={loading}
+              className="btn btn-block btn-sm border border-slate-700"
+            >
+              {loading ? (
+                <span className="loading loading-spinner"></span>
+              ) : (
+                "Login"
+              )}
+            </button>
           </div>
         </form>
       </div>
